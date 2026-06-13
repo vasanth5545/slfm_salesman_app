@@ -72,3 +72,11 @@ salesman_version.json
 admin_control.html
 functions/
 VASANTH_MASTER_GUIDE.txt
+
+.firebaserc
+firebase.json
+database.rules.json
+firestore.indexes.json
+firestore.rules
+lib/firebase_options.dart
+api/functions/
