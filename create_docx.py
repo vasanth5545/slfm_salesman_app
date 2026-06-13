@@ -29,6 +29,7 @@ doc.add_paragraph('Architected an Offline-First Application: Developed a compreh
 doc.add_paragraph('Developed Custom PHP Backend: Built and secured dynamic PHP endpoints (e.g., attendance.php, index functions) to enforce server-driven rules like dynamic attendance cutoffs and time constraints.', style='List Bullet')
 doc.add_paragraph('Engineered a Robust Sync Engine: Implemented a fault-tolerant offline synchronization mechanism using SQLite and Hive to queue local attendance and billing records, resolving complex data duplication issues.', style='List Bullet')
 doc.add_paragraph('Implemented Bank-Grade Security: Hardened the app against tampering by integrating FreeRASP for Root/Jailbreak detection, SSL Certificate Pinning, Firebase App Check, and encrypted data handling.', style='List Bullet')
+doc.add_paragraph('Repository Management & Security: Sanitized the production codebase for public GitHub release by extracting sensitive PHP/SQL credentials and Firebase configurations into secure, untracked environment variables and utilizing --dart-define for dynamic build injections.', style='List Bullet')
 doc.add_paragraph('Background Tracking & Gamification: Configured battery-optimized continuous location tracking. Built a dynamic, animated leaderboard (Top 3 Podium) using Lottie animations and Firebase Realtime Data.', style='List Bullet')
 
 p2 = doc.add_heading('2. Ammu - Mother Care App', level=2)

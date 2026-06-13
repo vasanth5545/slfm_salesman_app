@@ -68,3 +68,5 @@ ios/Runner/GoogleService-Info.plist
 scratch/
 slfm-privacy/
 salesman_version.json
+
+admin_control.html
