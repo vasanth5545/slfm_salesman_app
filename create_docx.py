@@ -24,6 +24,7 @@ doc.add_paragraph('Visual & Multimedia Design: Photo & Video Editing (Color Grad
 
 doc.add_heading('Projects', level=1)
 p1 = doc.add_heading('1. Enterprise Sales Force Automation & POS App (SLFM)', level=2)
+doc.add_paragraph('GitHub: https://github.com/vasanth5545/slfm_salesman_app.git')
 p1_sub = doc.add_paragraph('Role: Full-Stack Mobile Developer (Flutter + PHP)')
 doc.add_paragraph('Architected an Offline-First Application: Developed a comprehensive field sales app using Flutter to manage attendance, customer billing (POS), stock checking, and damage reporting in low-network areas.', style='List Bullet')
 doc.add_paragraph('Developed Custom PHP Backend: Built and secured dynamic PHP endpoints (e.g., attendance.php, index functions) to enforce server-driven rules like dynamic attendance cutoffs and time constraints.', style='List Bullet')
