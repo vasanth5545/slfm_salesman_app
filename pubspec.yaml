@@ -1,0 +1,120 @@
+name: slfm_salesman_app
+description: SLFM Attendance App for Salesmen.
+publish_to: none
+version: 4.5.1+36
+
+environment:
+  sdk: ^3.6.0
+
+dependencies:
+  flutter:       # CRITICAL: Required for every Flutter project - DO NOT REMOVE
+    sdk: flutter # CRITICAL: Required for every Flutter project - DO NOT REMOVE
+  
+  # CRITICAL: Core UI and responsive design - DO NOT REMOVE OR MODIFY
+  sizer: ^2.0.15              # Required for responsive design system
+  flutter_svg: ^2.0.9        # Required for SVG icon support
+  google_fonts: ^6.1.0       # Required for typography (replaces local fonts)
+
+  web: ^1.1.1
+  
+  # Feature dependencies - safe to modify
+  image: ^4.3.0
+  cached_network_image: ^3.3.1
+  connectivity_plus: ^6.1.4
+  dio: ^5.4.0
+  fluttertoast: ^8.2.4
+  fl_chart: ^0.65.0
+
+  intl: ^0.19.0
+  camera: ^0.10.5+5
+  permission_handler: ^11.1.0
+  table_calendar: ^3.1.3
+  url_launcher: ^6.3.2
+  image_picker: ^1.2.1
+  flutter_background_service: ^5.1.0
+  flutter_local_notifications: ^19.5.0
+  geolocator: ^14.0.2
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  package_info_plus: ^9.0.0
+  ntp: ^2.0.0
+  device_info_plus: ^12.3.0
+
+  firebase_core: ^4.4.0
+  sqflite: ^2.4.2
+  path_provider: ^2.1.5
+  path: ^1.9.1
+  uuid: ^4.5.3
+  flutter_secure_storage: ^10.0.0
+  freerasp: ^7.5.0
+  http_certificate_pinning: ^3.0.1
+  firebase_app_check: ^0.4.1+5
+  firebase_auth: ^6.2.0
+  cloud_firestore: ^6.2.0
+  firebase_database: ^12.2.0
+  firebase_crashlytics: ^5.1.0
+  firebase_remote_config: ^6.3.0
+  
+  # Security Additions
+  fluentui_emoji_icon: ^0.0.2  # 🔥 3D Emojis for Leaderboard
+  lottie: ^3.1.2               # 🔥 Animations for Leaderboard
+
+  open_filex: ^4.5.0
+  
+  http: any
+  shimmer: ^3.0.0
+  provider: ^6.1.5+1
+  firebase_messaging: ^16.2.2
+  auto_start_flutter: ^1.4.0
+  disable_battery_optimization: ^1.1.2
+  flutter_image_compress: ^2.4.0
+  audioplayers: ^6.7.1
+dev_dependencies:
+  flutter_test:    # CRITICAL: Required for Flutter project testing - DO NOT REMOVE
+    sdk: flutter   # CRITICAL: Required for Flutter project testing - DO NOT REMOVE
+  flutter_lints: ^5.0.0 # CRITICAL: Required for code quality - DO NOT REMOVE
+  flutter_launcher_icons: ^0.13.1
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: assets/images/logo.jpg
+
+flutter:
+  uses-material-design: true # CRITICAL: Required for Material icon font - DO NOT REMOVE
+  assets:
+    - assets/
+    - assets/images/
+    - assets/leaderboard/
+    - assets/leaderboard/dashborad_widget_leaderboard/
+    - assets/leaderboard/ranking/
+    - assets/leaderboard/top_3_podium/
+    - assets/google_fonts/   # 🔥 NEW: Bundled fonts for offline support
+    - assets/sounds/         # 🔥 NEW: Tick sounds
+  
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/google_fonts/Inter-Regular.ttf
+        - asset: assets/google_fonts/Inter-Medium.ttf
+          weight: 500
+        - asset: assets/google_fonts/Inter-SemiBold.ttf
+          weight: 600
+        - asset: assets/google_fonts/Inter-Bold.ttf
+          weight: 700
+        - asset: assets/google_fonts/Inter/static/Inter_18pt-Black.ttf
+          weight: 900
+    - family: Orbitron
+      fonts:
+        - asset: assets/google_fonts/Orbitron-Regular.ttf
+        - asset: assets/google_fonts/Orbitron-Bold.ttf
+          weight: 700
+
+  # CRITICAL ASSET MANAGEMENT RULES:
+  # - DO NOT ADD NEW ASSET DIRECTORIES (assets/svg/, assets/icons/, etc.)
+  # - ONLY USE EXISTING AND ITEMS AVAILABLE IN THE DIRECTORIES LISTED ABOVE (assets/, assets/images/)
+  
+  # CRITICAL FONTS RULE: 
+  # - THIS PROJECT USES GOOGLE FONTS (Bundled in assets/google_fonts/)
+  # - DO NOT FETCH FONTS AT RUNTIME (Prevents offline crashes)
+  # - DO NOT ADD STANDARD FLUTTER FONTS SECTION

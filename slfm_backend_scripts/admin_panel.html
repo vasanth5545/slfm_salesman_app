@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLFM Salesman Manager</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .tab {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: bold;
+            color: #666;
+        }
+
+        .tab.active {
+            border-bottom: 3px solid #007bff;
+            color: #007bff;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        button {
+            w_idth: 100%;
+            padding: 12px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        button.secondary {
+            background: #6c757d;
+            margin-top: 5px;
+        }
+
+        .bulk-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .bulk-row input,
+        .bulk-row select {
+            flex: 1;
+        }
+
+        #response {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 6px;
+            display: none;
+            white-space: pre-wrap;
+            font-size: 0.9em;
+        }
+
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>👔 Add Salesman</h2>
+
+        <div class="tabs">
+            <div class="tab active" onclick="switchTab('single')">Single Add</div>
+            <div class="tab" onclick="switchTab('bulk')">Bulk Add (Multiple)</div>
+        </div>
+
+        <!-- SINGLE FORM -->
+        <div id="single-form">
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" id="s_name" placeholder="e.g. Siva">
+            </div>
+            <div class="form-group">
+                <label>Phone</label>
+                <input type="text" id="s_phone" placeholder="e.g. 9876543210">
+            </div>
+            <div class="form-group">
+                <label>Showroom</label>
+                <!-- DROPDOWN -->
+                <select id="s_showroom"></select>
+            </div>
+            <div class="form-group">
+                <label>Gender</label>
+                <select id="s_gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="text" id="s_password" value="slfm2026">
+            </div>
+            <button onclick="addSingle()">Create Account</button>
+        </div>
+
+        <!-- BULK FORM -->
+        <div id="bulk-form" style="display:none;">
+            <div id="bulk-rows">
+                <!-- Rows injected by JS -->
+            </div>
+            <button class="secondary" onclick="addBulkRow()">+ Add Row</button>
+            <button onclick="addBulk()">Create All Accounts</button>
+        </div>
+
+        <div id="response"></div>
+    </div>
+
+    <script>
+        const API_URL = "https://skyblue-raven-196549.hostingersite.com/api/add_salesman.php";
+
+        // ✅ EDIT SHOWROOMS HERE
+        const SHOWROOM_LIST = [
+            "BigBazzar street",
+
+        ];
+
+        function populateShowroomOptions(selectElement) {
+            selectElement.innerHTML = "";
+            SHOWROOM_LIST.forEach(branch => {
+                const opt = document.createElement('option');
+                opt.value = branch;
+                opt.innerText = branch;
+                selectElement.appendChild(opt);
+            });
+        }
+
+        // Init Single Add Dropdown
+        window.onload = function () {
+            populateShowroomOptions(document.getElementById('s_showroom'));
+            // Re-init bulk rows to have dropdowns
+            document.getElementById('bulk-rows').innerHTML = '';
+            addBulkRow(); addBulkRow(); addBulkRow();
+        };
+
+        function switchTab(mode) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            event.target.classList.add('active');
+            document.getElementById('single-form').style.display = mode === 'single' ? 'block' : 'none';
+            document.getElementById('bulk-form').style.display = mode === 'bulk' ? 'block' : 'none';
+            clearResponse();
+        }
+
+        // --- SINGLE ADD ---
+        async function addSingle() {
+            const data = {
+                name: document.getElementById('s_name').value,
+                phone: document.getElementById('s_phone').value,
+                showroom_name: document.getElementById('s_showroom').value,
+                gender: document.getElementById('s_gender').value,
+                password: document.getElementById('s_password').value
+            };
+
+            if (!data.name) return showResponse("Name is required", true);
+
+            sendRequest(data);
+        }
+
+        // --- BULK ADD ---
+        function addBulkRow() {
+            const div = document.createElement('div');
+            div.className = 'bulk-row';
+            div.innerHTML = `
+            <input type="text" placeholder="Name" class="b-name">
+            <input type="text" placeholder="Phone" class="b-phone">
+            <select class="b-showroom"></select>
+            <select class="b-gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        `;
+            document.getElementById('bulk-rows').appendChild(div);
+
+            // Populate the new select
+            populateShowroomOptions(div.querySelector('.b-showroom'));
+        }
+        // Init with 3 rows
+        // addBulkRow(); addBulkRow(); addBulkRow(); // This is now handled by window.onload
+
+        async function addBulk() {
+            const rows = document.querySelectorAll('.bulk-row');
+            const users = [];
+
+            rows.forEach(row => {
+                const name = row.querySelector('.b-name').value;
+                if (name.trim()) {
+                    users.push({
+                        name: name,
+                        phone: row.querySelector('.b-phone').value,
+                        showroom_name: row.querySelector('.b-showroom').value,
+                        gender: row.querySelector('.b-gender').value,
+                        password: "slfm2026" // Default
+                    });
+                }
+            });
+
+            if (users.length === 0) return showResponse("Please enter at least one name", true);
+
+            sendRequest({ users: users });
+        }
+
+        // --- API HANDLER ---
+        async function sendRequest(payload) {
+            showResponse("Sending...", false);
+            try {
+                const res = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const result = await res.json();
+
+                let msg = "";
+                if (result.status === 'success' || result.status === 'completed') {
+                    msg += "✅ Success!\n";
+                    if (result.mode === 'bulk') {
+                        msg += `Added ${result.total_added} users.\n`;
+                        result.details.forEach(d => msg += `- ${d.name}: ${d.salesman_id} (${d.status})\n`);
+                    } else {
+                        msg += `ID: ${result.data.salesman_id}\nName: ${result.data.name}`;
+                    }
+                    showResponse(msg, false);
+                } else {
+                    showResponse("❌ Error: " + result.message, true);
+                }
+            } catch (e) {
+                showResponse("❌ Network/Server Error: " + e.message, true);
+            }
+        }
+
+        function showResponse(msg, isError) {
+            const el = document.getElementById('response');
+            el.style.display = 'block';
+            el.className = isError ? 'error' : 'success';
+            el.innerText = msg;
+        }
+
+        function clearResponse() {
+            document.getElementById('response').style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>

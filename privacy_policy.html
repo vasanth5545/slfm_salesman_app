@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - SLFM Attendance app</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #f9fafb;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e5e7eb;
+        }
+
+        h1 {
+            color: #111827;
+            font-size: 2.25rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 3px solid #3b82f6;
+            display: inline-block;
+        }
+
+        h2 {
+            color: #1f2937;
+            margin-top: 2rem;
+            font-size: 1.5rem;
+            border-left: 4px solid #3b82f6;
+            padding-left: 12px;
+        }
+
+        h3 {
+            color: #374151;
+            margin-top: 1.5rem;
+        }
+
+        p,
+        li {
+            font-size: 1rem;
+            color: #4b5563;
+        }
+
+        .effective-date {
+            color: #6b7280;
+            font-size: 0.875rem;
+            margin-bottom: 2rem;
+        }
+
+        .highlight {
+            background-color: #eff6ff;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3b82f6;
+            font-weight: 600;
+        }
+
+        .prominent-disclosure {
+            background-color: #fffbeb;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #f59e0b;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: #92400e;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #9ca3af;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1>Privacy Policy</h1>
+        <p class="effective-date">Effective Date: May 24, 2026</p>
+
+        <p>Welcome to the <strong>SLFM Attendance app</strong>. We are dedicated to protecting your privacy and ensuring
+            the security of your professional data. This Privacy Policy clarifies our practices regarding the
+            collection, use, and protection of information within our mobile application ("the App"), which is
+            exclusively designed for employees and authorized sales personnel of <strong>Sri Lakshmi Furniture Mart
+                (SLFM)</strong>.</p>
+
+        <p class="highlight">This App is an enterprise tool involving operational tracking and professional
+            authentication. By using the App, you consent to the data practices described in this policy.</p>
+
+        <div class="prominent-disclosure">
+            <h3>PROMINENT DISCLOSURE: Background Location Tracking</h3>
+            <p><strong>"SLFM Attendance app collects location data to enable tracking of your sales route even when the
+                    app is closed or not in use."</strong></p>
+            <p>This data is securely transmitted to your employer's administrative dashboard to monitor duty-hour travel
+                and geofence-verify your presence at authorized showroom locations.</p>
+        </div>
+
+        <h2>1. Information We Collect & Device Permissions</h2>
+        <p>To facilitate core operational workflows, attendance tracking, and sales management, the App collects the
+            following data and requests specific device permissions:</p>
+
+        <h3>1.1 Location Data & Foreground Services</h3>
+        <ul>
+            <li><strong>What we access and collect:</strong> High-precision location data (latitude and longitude) in
+                real-time. This includes access to <code>ACCESS_FINE_LOCATION</code>,
+                <code>ACCESS_COARSE_LOCATION</code>, and <code>ACCESS_BACKGROUND_LOCATION</code> permissions on your
+                device.</li>
+            <li><strong>Foreground Services (Location & Data Sync):</strong> The app uses Android Foreground Services to
+                ensure location tracking and data synchronization remain active and reliable while you are on duty. A
+                persistent notification will always be visible when this service is active, ensuring you are aware of
+                the ongoing tracking.</li>
+            <li><strong>Background Location:</strong> We collect location data in the background (when the app is
+                minimized or not in use) to continuously log travel routes during working hours and to verify presence
+                at showroom locations using geofencing.</li>
+            <li><strong>Status Logging:</strong> The app actively logs location events, including timestamps of when
+                location services are turned off, when permissions are revoked, or when battery optimization disrupts
+                tracking. This data is visible to administrators to ensure compliance during duty hours.</li>
+            <li><strong>Battery Optimization:</strong> To ensure uninterrupted location tracking during duty hours, the
+                app may request permission to ignore battery optimizations
+                (<code>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</code>). This ensures the background tracking service is not
+                prematurely killed by the device's battery saver.</li>
+        </ul>
+
+        <h3>1.2 Camera and Biometrics</h3>
+        <ul>
+            <li><strong>What we collect:</strong> Live images captured exclusively through the App's camera.</li>
+            <li><strong>Why we collect it:</strong> A mandatory live selfie is required for identity verification during
+                clock-in, clock-out, and re-entry to prevent identity fraud. Images are securely transmitted to the
+                administrative database and never shared with third parties.</li>
+        </ul>
+
+        <h3>1.3 Device and Security Information</h3>
+        <ul>
+            <li><strong>What we collect:</strong> Unique Device Identifiers (Device ID, Model, OS version), Battery
+                status, and Network connectivity logs.</li>
+            <li><strong>Security:</strong> We utilize Runtime Application Self-Protection (RASP) to detect rooted
+                devices or emulators to prevent attendance spoofing.</li>
+        </ul>
+
+        <h3>1.4 Phone Call Management</h3>
+        <ul>
+            <li><strong>Usage:</strong> The App utilizes the phone's dialer function (<code>CALL_PHONE</code>
+                permission).</li>
+            <li><strong>Purpose:</strong> To allow salesmen to directly contact the showroom office or customers for
+                professional inquiries directly from within the app.</li>
+        </ul>
+
+        <h3>1.5 Push Notifications</h3>
+        <ul>
+            <li><strong>Usage:</strong> Device tokens for Firebase Cloud Messaging (FCM).</li>
+            <li><strong>Purpose:</strong> To send critical operational alerts, attendance reminders, and management
+                announcements.</li>
+        </ul>
+
+        <h2>2. Data Retention and Deletion</h2>
+        <ul>
+            <li><strong>Retention:</strong> Professional data is retained for the duration of your employment plus a
+                minimum of 7 years for auditing purposes.</li>
+            <li><strong>Account Termination & Data Deletion:</strong> Users cannot delete their accounts directly from
+                the app as it is an enterprise tool tied to employment. Data deletion requests must be routed through
+                the SLFM HR/IT Department. Upon termination of employment, your access will be revoked, and data will be
+                archived or deleted in accordance with company policy.</li>
+        </ul>
+
+        <h2>3. Data Sharing</h2>
+        <p>We do <strong>not</strong> sell, rent, or share your personal or location data with any third-party
+            advertisers or external entities. All data is strictly used internally by SLFM management for operational
+            oversight.</p>
+
+        <h2>4. Contact Us</h2>
+        <p>For questions regarding your data, please contact the SLFM IT Department:</p>
+        <p>
+            <strong>Email:</strong> vasanthvarman0@gmail.com<br>
+            <strong>Office:</strong> SLFM, New Street, Mannargudi, Thiruvarur, Tamil Nadu, India.
+        </p>
+    </div>
+
+    <footer>
+        &copy; 2026 Sri Lakshmi Furniture Mart. All Rights Reserved.
+    </footer>
+</body>
+
+</html>

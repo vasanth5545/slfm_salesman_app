@@ -1,0 +1,114 @@
+--- FILE 1 ---
+VASANTH M  
+41/12A, MaligaiMedu, Mannargudi, TN | +91 8489758648 | vasanthvarman0@gmail.com  
+Summary  
+Creative and results -oriented App Developer & Visual Designer with hands -on experience in building 
+Flutter -based mobile applications and crafting compelling digital visuals. Adept at combining technical 
+development skills with a keen eye for design to deliver user -friendly and engaging solutions. Eager to 
+contribute to innovative projects in a dynamic environmen t 
+ 
+Skills  
+ App Development:   
+o Flutter, Dart, Mobil e UI/UX Design  
+o Full App Development Lifecycle (Design, Development, Testing)  
+o (Please specify IDEs like VS Code, Android Studio if used)  
+ Visual & Multimedia Design:   
+o Photo & Video Creation/Editing (Color Grading, Album Design)  
+o Branding & Visual Identity  
+o Print & Digital Media Content  
+o (Please specify proficiency in software like Adobe Creative Suite - Photoshop, Premiere Pro, 
+Illustrator, Figma, etc.)  
+ Professional:   
+o Content Creation, Production Workflow Management, Project Collaboration, Creativity  
+Professional Experience  
+Visual Content Creator  | Murugan Digital Studio, Mannargudi December 2017 – May 2023  
+ Designed and edited a high volume of photos and videos for weddings, functions, and special events, 
+ensuring client satisfaction.  
+ Managed complete production workflows: from initial shooting and videography to final editing, 
+color grading, and delivery.  
+ Contributed significantly to content creation and publication for the studio's YouTube channel.  
+ Developed expertise in professional photography, videography techniques, and image/video 
+enhancement.  
+Projects  
+Ammu - Mother Care App  (Ongoing Flutter Project)  
+ Developing a user -centric mobile application using Flutter to provide health tips, baby care guidance, 
+diet charts, and emergency contacts for ne w mothers.  
+ Key contributions include UI/UX design, core feature development with Flutter, creation of in -app 
+photo/video tutorials, and implementation of multilingual support (Tamil & English).  
+Education  
+B A 2021 – 2024 Mannai Rajagobalaswamy Government Ar ts and Science College, Mannargudi, Tamil 
+Nadu.  
+Languages  
+ Tamil:  Native  
+ English:  Proficient  
+ 
+
+--- FILE 2 ---
+VASANTH M
+41/12A, MaligaiMedu, Mannargudi, Thiruvarur District, Tamil Nadu +91 8489758648 |
+vasanthvarman0@gmail.com
+Professional Profile
+A creative and motivated App Developer and Visual Designer with hands-on experience in
+building mobile applications using Flutter and designing impactful visuals for diverse
+digital platforms. Possesses a strong ability to merge technical development proficiency
+with aesthetic design principles to deliver complete, user-friendly solutions. Eager to
+contribute to innovative projects that require a blend of application development and
+multimedia design expertise.
+Skills
+Mobile App Development:Proficient in developing cross-platform mobile
+applications using Flutter and Dart.
+Experience in UI/UX design for mobile applications, ensuring user-friendly
+interfaces.
+Full app development lifecycle: design, development, testing, and deployment.
+Visual & Multimedia Design:Photo & Video Editing/Design: Advanced skills in
+creating and editing photos and videos for various purposes including weddings,
+functions, promotional content, and tutorials. Expertise in color grading, album
+design, and final production workflows.
+Branding & Identity: Capable of developing visual identities that effectively
+communicate brand messages.
+Print & Digital Media: Skilled in creating visually appealing content for both print
+and digital platforms.
+Software & Tools:App Development: Flutter, Dart, (mention any IDEs like VS Code,
+Android Studio if applicable)
+Design Software: (Please specify if Vasanth uses Adobe Creative Suite - e.g.,
+Photoshop, Premiere Pro, Illustrator, After Effects - or other design tools like Figma,
+Canva, etc.)
+Other Professional Skills:Content Creation (Photo, Video)
+Project Collaboration & Teamwork
+Production Workflow Management
+Attention to Detail
+Creativity and Innovation
+Professional Experience
+Visual Content Creator | Murugan Digital Studio, Mannargudi December 2017 – May 2023
+Successfully designed and edited a high volume of photos and videos for weddings, functions,
+and special events, consistently meeting client expectations.
+Managed end-to-end production workflows, including on-location photo/videography, detailed
+editing, color grading, and final delivery of digital and physical albums/videos.
+Gained extensive hands-on experience in professional photography, videography techniques, and
+picture framing.
+Actively contributed to creating and publishing engaging content for the studio's YouTube
+channel, enhancing its online presence.
+Collaborated with clients to understand their vision and deliver customized visual products.
+Projects
+Ammu - Mother Care App (Ongoing Personal/Collaborative Project)
+Currently developing a comprehensive mobile application using Flutter aimed at new mothers,
+offering health tips, baby care guidance, personalized diet charts, and quick access to emergency
+contacts.
+Leading or significantly contributing to the UI/UX design, focusing on creating intuitive and user-
+friendly screens and features.
+Responsible for creating engaging photo and video tutorial content for the app, as well as
+promotional materials.
+Implementing key functionalities such as push notifications for reminders and tips, and
+multilingual support (initially Tamil and English).
+Working collaboratively within a team environment to ensure timely progress and integration of
+features.
+Education
+ 2021 – 2024 Mannai Rajagobalaswamy Government Arts and Science College, Mannargudi, Tamil
+Nadu. 
+Languages
+Tamil: Native / Fluent
+English: Proficient
+Declaration
+I hereby declare that all the information provided in this Curriculum Vitae is true and accurate to the
+best of my knowledge and belief.
+
